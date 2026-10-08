@@ -1097,7 +1097,13 @@ namespace MonitorControl
             ClientSize = new Size(Ui.S(420), Ui.S(480));
             MinimumSize = new Size(Ui.S(360), Ui.S(220));
             StartPosition = FormStartPosition.CenterScreen;
-            try { Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath); } catch { }
+            // app.ico is embedded by build.bat; loading it from the resource keeps the small title-bar size sharp.
+            try
+            {
+                using (System.IO.Stream s = typeof(MainForm).Assembly.GetManifestResourceStream("MonitorControl.app.ico"))
+                    if (s != null) Icon = new Icon(s);
+            }
+            catch { }
 
             selector = new ChipGroup();
             selector.BackColor = Theme.Back;
