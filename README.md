@@ -1,6 +1,7 @@
 # Monitor Control
 
-A small Windows app for changing monitor settings from the desktop.
+Control your monitors on Windows with this simple app.
+It uses DDC protocol to allow you to change inputs without any external hardware.
 
 ## What it can do
 
