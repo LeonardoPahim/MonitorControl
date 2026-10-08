@@ -3,6 +3,8 @@
 Control your monitors on Windows with this simple app.
 It uses DDC protocol to allow you to change inputs without any external hardware.
 
+<img src="docs/screenshot.png" alt="Monitor Control screenshot" width="400">
+
 ## What it can do
 
 - Adjust brightness and contrast
